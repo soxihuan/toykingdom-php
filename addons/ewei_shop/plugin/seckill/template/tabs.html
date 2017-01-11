@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs">
+    
+    
+    {ifp 'seckill.index'}<li {if $_GPC['method']=='' ||  $_GPC['method']=='index'}class="active"{/if}><a href="{php echo $this->createPluginWebUrl('seckill/index')}">选择限时卖商品</a></li>{/if}
+    {ifp 'seckill.skill'}<li {if $_GPC['method']=='skill'}class="active"{/if}><a href="{php echo $this->createPluginWebUrl('seckill/skill')}">秒杀商品</a></li>{/if}
+    {ifp 'seckill.switchkill'}<li {if $_GPC['method']=='switchkill'}class="active"{/if}><a href="{php echo $this->createPluginWebUrl('seckill/switchkill')}">秒杀显示设置</a></li>{/if}
+
+
+
+</ul>

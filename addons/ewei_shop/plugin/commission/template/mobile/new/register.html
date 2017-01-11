@@ -1,0 +1,365 @@
+{template 'common/header'}
+<title>成为分销商</title>
+<style type="text/css">
+body {margin:0; font-family:'微软雅黑'; background:#f4f4f4;}
+.top {overflow:hidden}
+.top img { width:100%;}
+a{ text-decoration: none;}
+.main {height:520px; padding:30px 12px;}
+.main .text {height:20px; font-size:14px; line-height:20px; color:#666;}
+.main .text span {color:#f6914b;}
+
+.main .text1 {padding:5px; font-size:14px; line-height:20px; color:#666;}
+.main .text1 span {color:#f6914b;}
+
+
+.main .input {height:36px; margin:14px 10px 0 0;background:#fff;border-radius:5px;}
+.main .input input {width:100%;  height:36px; border:0px; outline:none; font-size:15px; color:#999;border-radius: 5px;padding-left: 10px;box-sizing:border-box;}
+
+.main .sub {height:36px; background:#fdd32f; margin-top:14px;border:1px solid #222121;border-radius:5px; text-align:center; line-height:36px; color:#222121; font-size:14px;position: relative;}
+.main .title {height:30px; margin-top:20px; font-size:12px; line-height:30px; color:#666;}
+.vip_main {height:182px; background:#fff; border-radius:4px;}
+.vip_main .vip {height:36px; padding:12px; border-bottom:1px solid #f1f1f1; overflow:hidden; font-size:12px; color:#999;}
+.vip_main .vip .ico1 {height:36px; width:36px; background:#32cd32; border-radius:18px; color:#fff; font-size:20px; line-height:36px; text-align:center; float:left;}
+.vip_main .vip .ico2 {height:36px; width:36px; background:#fece00; border-radius:18px; color:#fff; font-size:22px; line-height:40px; text-align:center; float:left;}
+.vip_main .vip .text {height:36px; margin-left:12px; float:left;}
+.vip_main .vip .text .t1 {height:18px; font-size:15px; color:#666; line-height:18px;}
+.vip_main .vip .text .t2 {height:18px; font-size:13px; color:#999; line-height:18px;}
+
+
+.ok {height:200px; padding-top:65px;}
+.ok .ico {height:65px; width:65px; margin:auto; border:3px solid #32cd32; border-radius:55px; color:#32cd32; font-size:50px; text-align:center; line-height:65px;}
+.ok .text {height:20px; margin-top:30px; font-size:16px; color:#666; line-height:20px; text-align:center;}
+.ok .sub {height:32px; width:145px; background:#e53c39; margin:20px auto; border-radius:20px; color:#fff; line-height:32px; text-align:center; font-size:16px;}
+.otherWay{font-size: 13px;color: #505050;}
+.white-person{height: 36px;line-height: 36px;border-radius: 5px;color: #222121;font-size: 14px;text-align: center;margin-top:10px;border:1px solid #222121;position: relative;}
+.main .sub span{display: inline-block;height: 16px;line-height: 16px;padding-left:29px;background: url('../addons/ewei_shop/template/mobile/default/static/images/register-car.png') no-repeat left center;background-size:contain;position: absolute;left: 50%;top:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);}
+.white-person span{display: inline-block;height: 16px;line-height: 16px;padding-left:29px;background: url('../addons/ewei_shop/template/mobile/default/static/images/user.png') no-repeat left center;background-size:contain;position: absolute;left: 50%;top:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);}
+.intoPhoneNumber{background: #fff;padding:13px 18px;display: none;border-radius: 4px;}
+#PhoneNumber{border: 1px solid #A7A7A7;border-radius: 4px;display: block;height: 32px;line-height: 32px;font-size: 14px;width: 100%;padding-left: 15px;box-sizing:border-box;}
+#PhoneNumber::-webkit-input-placeholder {
+    color: #8A8A8A;
+    text-indent: 5px;
+}
+.makesure{height: 32px;line-height: 32px;text-align: center;font-size: 14px;border:1px solid #222121;border-radius: 4px;margin-top: 8px;}
+input{font-family: 微软雅黑;}
+.main .input .thisIsMark{display:inline-block;width: 90px;height: 30px;line-height: 27px;text-align: center;font-size: 14px;color:#222121;border-radius: 5px;position: absolute;right: 10px;top: 50%;transform:translatey(-50%);-webkit-transform:translatey(-50%);border:1px solid #222121;background:none;padding:0;}
+.jxl{display:none}
+</style>
+
+<div id='container'></div>
+<script id='tpl_main' type='text/html'>
+	<div class="top">
+        <img src="<%if set.regbg!=''%><%set.regbg%><%else%>../addons/ewei_shop/plugin/commission/template/mobile/default/static/images/bg.png<%/if%>" />
+        </div>
+ 
+	<div class="main">
+                   <%if status==0%>
+	<div class="text">欢迎加入<span><%shop_set.name%></span>，请填写申请信息</div>
+	<div class="text">邀请人：<span><%if agent%><%agent.nickname%><%else%>总店<%/if%></span> (请核对)</div>
+	<div class="input"><input type="text" id='realname' placeholder="请填写真实姓名，用于佣金结算" <% if jxl == 1%>value="<% aftername %>"<%else%>value="{$member['realname']}"<%/if%> /></div>
+	<div class="input <%if jxl == 1 %>jxl<%/if%>" style="position:relative;"><input type="text" id='mobile' placeholder="请填写手机号码方便联系"  <% if jxl == 1%>value="<% jxlNum %>"<%else%>value="{$member['mobile']}"<%/if%>/><input class="thisIsMark" value="获取验证码" type="button"/></div>
+	<div class="input <%if jxl == 1 %>jxl<%/if%>"><input type="text" id='yanzhengmark' placeholder="请填写验证码"  /></div>
+  <div class="input"><input type="text" id='weixin' placeholder="请填写微信号"  <% if jxl == 1%>value=""<%else%>value="{$member['weixin']}"<%/if%>/></div>
+	<div class="sub" id="submit">申请成为分销商</div>
+                   <%/if%>
+                   <%if status==1%>
+	                <div class="text1">本店累计消费满 <span><%ordercount%></span> 次，
+                       才可成为&lt;<%shop_set.name%>&gt;购物中心分销商，您已消费 <span><%order%></span> 次，请继续努力！</div>
+                    <div class="sub" onclick="location.href='{php echo $this->createMobileUrl('shop/list')}'"><i class='fa fa-shopping-cart'></i> 继续去购物</div>
+                    <p class="otherWay">本店其他申请方式</p>
+                    <div class="white-person">
+                        <span>金喜路客户</span>
+                    </div>
+                    <%/if%>
+                   <%if status==2%>
+                   <div class="text1">本店累计消费满 <span><%moneycount%></span> 元，
+                       才可成为&lt;<%shop_set.name%>&gt;购物中心分销商，您已消费 <span><%money%></span> 元，请继续努力！</div>
+	                 <div class="sub" onclick="location.href='{php echo $this->createMobileUrl('shop/list')}'"><span>继续去购物</span></div>
+                   <p class="otherWay">本店其他申请方式</p>
+                   <div class="white-person">
+                     <span>金喜路客户</span>
+                   </div>
+                   <%/if%>
+
+                    <%if status==3%>
+                    <div class="text1">购买<span><%goods.title%></span>
+                       才可成为&lt;<%shop_set.name%>&gt;购物中心分销商，快去购买吧”</div>
+
+                    <div class="sub" onclick="location.href='{php echo $this->createMobileUrl('shop/detail')}&id=<%goods.id%>'"><i class='fa fa-shopping-cart'></i> 购买此商品</div>
+                    <p class="otherWay">本店其他申请方式</p>
+                    <div class="white-person">
+                        <span>金喜路客户</span>
+                    </div>
+                   <%/if%>
+                   
+                   <div class="intoPhoneNumber">
+                     <input type="text" placeholder="请输入您在金喜路购物时的订单手机号" value="" id="PhoneNumber">
+                     <div class="makesure">确定</div>
+                   </div>
+        
+        <div class="title">分销商特权</div>
+		<div class="vip_main">
+        	<div class="vip">
+            	<div class="ico1"><i class="fa fa-qrcode"></i></div>
+                <div class="text"><div class="t1">独立微店</div><div class="t2">拥有自己的微店及推广二维码；</div></div>
+            </div>
+            <div class="vip">
+            	<div class="ico2"><i class="fa fa-cny"></i></div>
+                <div class="text"><div class="t1">销售拿佣金</div><div class="t2">微店卖出商品，您可以获得佣金；</div></div>
+            </div>
+            <div class="vip" style="border-bottom:0px;">分销商的商品销售统一由厂家直接收款、直接发货，并提供产品的售后服务，分销佣金由厂家统一设置。</div>
+        </div>
+</div>
+</script>
+<script id="tpl_ok" type="text/html">
+     <div class="top">
+        <img src="<%if set.regbg!=''%><%set.regbg%><%else%>../addons/ewei_shop/plugin/commission/template/mobile/default/static/images/bg.png<%/if%>" />
+     </div>
+    <div class="ok">
+    <div class="ico"><i class="fa fa-check"></i></div>
+      <%if member.status=='1'%>
+        <div class="text">您的分销申请已经审核通过！</div>
+      
+        <a href="{php echo $this->createPluginMobileUrl('commission/myshop')}"><div class="sub">进入我的小店</div></a>
+        
+      <%else%>
+         <!-- <div class="text">您的分销申请已经提交，请等待审核！</div> -->
+         <p class="tipTitleName">您的申请已提交</p>
+         <p class="tipTxt">&bull;请主动联系导师予以审核，否则不予通过哦！</p>
+         <p  class="tipTxt">&bull;导师添加人数较多，请耐心等待，或者让邀请你的朋友拉你进窝在家的店主群进行核实审核</p>
+         <img src="" alt="" class="tipImg">
+         <p class="teacherWechart"></p>
+         <p class="gray">长按复制微信号</p>
+        <a href="{php echo $this->createMobileUrl('shop')}"><div class="sub">去商城逛逛</div></a>
+       <%/if%>
+    </div>
+</script>
+<script language="javascript">
+    require(['tpl', 'core'], function(tpl, core) {
+        
+        core.pjson('commission/register',{mid:"{$mid}"},function(json){
+            var result = json.result;
+
+            if(result.member.isagent=='1'){
+                $('#container').html(  tpl('tpl_ok',result) );
+
+         
+            core.pjson('commission/register',{mid:"{$mid}",fan:"fanid"},function(json){
+                var result1 = json.status.fanid;
+                console.log(result1);
+                Number(result1);
+                // var leaveNum = result1%3;               
+                // if (leaveNum == 0) {               
+                //     $('.teacherWechart').html('导师微信:'+PicList[0]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[1]+'');
+                // }else if(leaveNum == 1){
+               
+                //     $('.teacherWechart').html('导师微信:'+PicList[2]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[3]+'');
+                // }else if(leaveNum == 2){
+                 
+                //     $('.teacherWechart').html('导师微信:'+PicList[4]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[5]+'');
+                // }
+
+                var leaveNum = result1%2;               
+                if (leaveNum == 0) {               
+                    $('.teacherWechart').html('导师微信:'+PicList[2]+'');
+                    $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[3]+'');
+                }else if(leaveNum == 1){
+               
+                    $('.teacherWechart').html('导师微信:'+PicList[4]+'');
+                    $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[5]+'');
+                }
+                // else if(leaveNum == 2){
+                 
+                //     $('.teacherWechart').html('导师微信:'+PicList[4]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[5]+'');
+                // }
+               
+            })    
+
+
+                return;
+            }
+            $('#container').html(  tpl('tpl_main',result) );
+
+
+
+            $('.makesure').click(function(event) {
+                var jxlNum = $('#PhoneNumber').val();
+                core.pjson('commission/register',{jxlNum:jxlNum},function(json){
+                    var result1 = json.result;
+                    if(json.status==0){
+                        core.tip.show(json.result);
+                        return;
+                    }
+//                    result[] = result[]
+                    $('#container').html(  tpl('tpl_main',result1) );
+
+
+
+
+                    $('#submit').click(function(){
+                        if($('#realname').isEmpty()){
+                            core.tip.show('请填写您的姓名!');
+                            return;
+                        }
+                        if($('#weixin').isEmpty()){
+                            core.tip.show('请填写微信号!');
+                            return;
+                        }
+
+
+                        var data = {
+                            'agentid':"{$_GPC['mid']}",
+                            'realname': $('#realname').val(),
+                            'mobile': $('#mobile').val(),
+                            'weixin': $('#weixin').val(),
+                            'cwy' :'qwe'
+
+                        };
+                        core.pjson('commission/register',data,function(pjson){
+                            // var result = json.result;
+                            var result = pjson.result;
+                            if(pjson.status==0){
+                                core.tip.show(pjson.result);
+                                return;
+                            }
+
+                            result.member.status = result.status;
+                            $('#container').html(  tpl('tpl_ok',result) );
+
+                        },true,true);
+                    });
+
+
+
+
+                },true,true)
+            });
+
+
+
+
+
+            $('.white-person').click(function(event) {
+                $(this).hide();
+                $('.intoPhoneNumber').show();
+            });
+
+            $('.thisIsMark').click(function(event) {
+                //点击调用短信接口
+                var telNum = $('#mobile').val();
+                    core.pjson('commission/register',{moblie:telNum},function(json){
+
+                })
+
+
+
+                var timer;
+                var countdown=60;
+                //点击之后将该文本框设置为禁用
+                $('.thisIsMark').eq(0).attr("disabled", true);
+                $('.thisIsMark').eq(0).val('重新获取'+countdown+'s');
+                countdown--;
+                $(this).css('opacity', 0.5);
+                //创建一个定时器
+                timer=setInterval(function(){
+                    if (countdown==0) {
+                        $('.thisIsMark').eq(0).attr("disabled",false);
+                        $('.thisIsMark').eq(0).val('获取验证码');
+                        countdown = 60;
+                        //60秒后事件执行一轮后 撤销定时器
+                        clearInterval(timer)
+                        $('.thisIsMark').css('opacity', 1);
+                    } else {
+                        $('.thisIsMark').eq(0).attr("disabled", true);
+                        $('.thisIsMark').eq(0).val('重新获取'+countdown+'s');
+                        countdown--;
+                    }
+                }, 1000)
+            });
+
+
+            $('#submit').click(function(){
+                if($('#realname').isEmpty()){
+                    core.tip.show('请填写您的姓名!');
+                    return;
+                }
+                if(!$('#mobile').isMobile()){
+                    core.tip.show('请填写正确手机号!');
+                    return;
+                }
+                if($('#yanzhengmark').isEmpty()){
+                    core.tip.show('请填写短信验证码!');
+                    return;
+                }
+                if($('#weixin').isEmpty()){
+                    core.tip.show('请填写微信号!');
+                    return;
+                }
+                var yanzheng = $('#yanzhengmark').val();
+                var telNum2 = $('#mobile').val();
+                core.pjson('commission/register',{yanzhengmark:yanzheng,mobile:telNum2},function(json){
+
+                })
+
+
+                var data = {
+                    'agentid':"{$_GPC['mid']}",
+                    'realname': $('#realname').val(),
+                    'mobile': $('#mobile').val(),
+                    'weixin': $('#weixin').val(),
+                    'yanzhengmark': $('#yanzhengmark').val()
+
+                };
+                core.pjson('commission/register',data,function(pjson){
+                   // var result = json.result;
+                    var result = pjson.result;
+                    if(pjson.status==0){
+                        core.tip.show(pjson.result);
+                        return;
+                    }
+
+                    result.member.status = result.status;
+                    $('#container').html(  tpl('tpl_ok',result) );
+
+                                    core.pjson('commission/register',{mid:"{$mid}",fan:"fanid"},function(json){
+                var result1 = json.status.fanid;
+                console.log(result1);
+                Number(result1);
+                
+                // var leaveNum = result1%3;               
+                // if (leaveNum == 0) {               
+                //     $('.teacherWechart').html('导师微信:'+PicList[0]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[1]+'');
+                // }else if(leaveNum == 1){
+               
+                //     $('.teacherWechart').html('导师微信:'+PicList[2]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[3]+'');
+                // }else if(leaveNum == 2){
+                 
+                //     $('.teacherWechart').html('导师微信:'+PicList[4]+'');
+                //     $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[5]+'');
+                // }
+
+                var leaveNum = result1%2;
+                if (leaveNum == 0) {               
+                    $('.teacherWechart').html('导师微信:'+PicList[2]+'');
+                    $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[3]+'');
+                }else if(leaveNum == 1){
+               
+                    $('.teacherWechart').html('导师微信:'+PicList[4]+'');
+                    $('.tipImg').attr('src', '../addons/ewei_shop/template/mobile/default/static/images/'+PicList[5]+'');
+                }
+
+            })
+
+                },true,true);
+            });
+        },true);
+    })
+</script>
+{template 'common/footer'}

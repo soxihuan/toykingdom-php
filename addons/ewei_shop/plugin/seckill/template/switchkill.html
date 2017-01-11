@@ -1,0 +1,41 @@
+{template 'web/_header'}
+{template 'tabs'}
+
+
+
+<div class="main">
+    <form id="dataform"    {ifp 'seckill.switchkill.save'}action="" method="post"{/if} class="form-horizontal form">
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-3 col-md-2 control-label">首页显示秒杀</label>
+                <div class="col-sm-9 col-xs-12">
+                    {ifp 'seckill.switchkill.save'}
+                    <label class="radio-inline">
+                        <input type="radio" name="data[isopen]" value='1' {if $iskill['isopen']==1}checked{/if} /> 开启
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="data[isopen]" value='0' {if empty($iskill['isopen'])}checked{/if} /> 关闭
+                    </label>
+                    {else}
+                    <div class='form-control-static'>{if $iskill['isopen']==1}开启{else}关闭{/if}</div>
+                    {/if}
+                </div>
+            </div>
+
+            <div class="form-group"></div>
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
+                <div class="col-sm-9 col-xs-12">
+                    <input type="submit" name="submit"  value="保存设置" class="btn btn-primary"/>
+                    <input type="hidden" name="token" value="{$_W['token']}" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </form>
+</div>
+
+{template 'web/_footer'}

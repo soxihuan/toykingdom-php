@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs">
+    
+    
+    {ifp 'statistics.index'}<li {if $_GPC['method']=='index' || $_GPC['method']=='' }class="active"{/if}><a href="{php echo $this->createPluginWebUrl('statistics/index')}">分销下线排名</a></li>{/if}
+    {ifp 'statistics.sales'}<li {if $_GPC['method']=='sales'}class="active"{/if}><a href="{php echo $this->createPluginWebUrl('statistics/sales')}">分销商销售额排名</a></li>{/if}
+    {ifp 'statistics.stat'}<li {if $_GPC['method']=='stat'}class="active"{/if}><a href="{php echo $this->createPluginWebUrl('statistics/stat')}">分销商下级和营业额统计</a></li>{/if}
+
+
+
+</ul>

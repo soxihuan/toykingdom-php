@@ -1,0 +1,117 @@
+{template 'common/header'}
+<title>我的导师</title>
+<style type="text/css">
+    body {margin:0px; background:#eee; font-family:'微软雅黑'; -moz-appearance:none;}
+    a {text-decoration:none;}
+    .title{height: 44px;line-height: 44px;font-size: 16px;padding-left: 29px;position:relative;background: #fff;}
+    .title i{height: 16px;width: 9px;background:url('../addons/ewei_shop/template/mobile/default/static/images/next.png') no-repeat center center;background-size: contain;position: absolute;left: 13px;top: 50%;transform:translatey(-50%) rotate(180deg);}
+    .teacherInfo{padding:0 28px;margin-top: 28px;overflow: hidden;}
+    .teacherInfo .teacherImg{width:90px;height: 90px;float: left;}
+    .teacherInfo .teacherImg img {width:100%;height: 100%;}
+    .teacherInfo .teacherName{margin-top: 20px;margin-left: 20px;float: left;}
+    .teacherInfo .teacherName .trueName{font-size: 0.4rem;font-weight: bold;line-height: 25px;white-space: nowrap;}
+    .teacherInfo .teacherName .wxNumber{font-size:0.3rem;line-height: 20px; white-space: nowrap;}
+    .remind{font-size: 16px;line-height: 22px;text-align: center;}
+    .erweiImg{width: 300px;height: 300px;margin: 20px auto;}
+    .erweiImg img{width: 100%;height: 100%;}
+    .nullPic{    
+        height: 131px;
+        width: 100%;
+        margin: 50px 0px 60px;
+        color: #ccc;
+        font-size: 12px;
+        text-align: center;
+    }
+    .thereisnoone{
+            display: block;
+    margin: 0 auto;
+    height: 131px;
+    width: 207px;
+    background: url('../addons/ewei_shop/template/mobile/default/static/images/map.png') no-repeat center center;
+    background-size: cover;
+    }
+    .teachrP{font-size:0.35rem;text-align: left;margin: 0.25rem auto 0;width:80%;color: #666;}
+</style>
+
+<script>
+    var oHtml=document.documentElement;
+    getSize();
+    function getSize(){
+
+    var screenWidth=oHtml.clientWidth;
+    oHtml.style.fontSize=screenWidth/9.38+'px'
+    
+
+    }
+
+    window.onresize=function(){
+        getSize();
+
+    }
+    getSize();
+
+</script>
+<div class="teacher_top">
+    <div class="title" onclick='history.back()'><i class=''></i> 导师</div>
+</div>
+{if $mentor['name']==''}
+        
+<div class="nullPic">
+   <i class="thereisnoone" style=""></i><br><br><br><span style="line-height:18px; font-size:16px;color:#999999;">您好，恭喜您开店成功~</span>
+</div>
+<p class="teachrP" style="padding-top:0.7rem;">我们正在为您分配开店导师，请您耐心等待！</p>
+<p class="teachrP">导师分配时间</p>
+<p class="teachrP" style="margin-top:0.1rem;">周一至周日  上午9：00至下午17：30</p>
+
+
+{else}
+    <div class="teacherInfo">
+        <div class="teacherImg">
+            <img src='{$mentor['head_url']}' />
+
+        </div>
+        <div class="teacherName">
+            <div class="trueName">{$mentor['name']}</div>
+            <div class="wxNumber">微信号：{$mentor['wechat']}</div>
+        </div>
+    </div>
+    <div class="erweiImg">
+        <img src='{$mentor['qr_code']}' />
+    </div>
+
+
+<div class="remind">长按二维码，专属导师为您服务</div>
+{/if}
+
+
+<!-- <div id='container'></div>
+
+<script id='tpl_team' type='text/html'>
+    <div class="team_list_head">
+        <div class="info">成员信息</div>
+        <div class="num">TA的佣金/成员</div>
+    </div>
+    <%each list as user%>
+    <div class="team_list">
+        <div class="img"><img src="<%user.avatar%>" height="40"></div>
+        <div class="info"><%user.nickname%><br><span><%user.agenttime%></span></div>
+        <div class="num">+<%user.commission_total%><br><span><%user.agentcount%> 个成员</span></div>
+    </div>
+    <%/each%>
+</script>
+<script id='tpl_empty' type='text/html'>
+
+    <div class="team_no"><i class="thereisnoone" style=""></i><br><br><br><span style="line-height:18px; font-size:16px;color:#999999;">您还没有相关成员~</span></div>
+
+</script>
+ -->
+<script language="javascript">
+
+    require(['tpl', 'core'], function (tpl, core) {
+
+
+
+    })
+</script>
+{php $show_footer=true}
+{template 'common/footer'}

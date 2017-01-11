@@ -1,0 +1,190 @@
+{template 'web/_header'}
+{template 'tabs'}
+<div class="panel panel-info">
+    <div class="panel-heading">筛选</div>
+    <div class="panel-body">
+        <form action="./index.php" method="get" class="form-horizontal" role="form" id="form1">
+            <input type="hidden" name="c" value="site" />
+            <input type="hidden" name="a" value="entry" />
+            <input type="hidden" name="m" value="ewei_shop" />
+            <input type="hidden" name="do" value="plugin" />
+            <input type="hidden" name="method" value="stat" />
+            <input type="hidden" name="p" value="statistics" />
+            <div class="form-group">
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">成为分销商时间</label>
+                    <div class="col-sm-7 col-lg-9 col-xs-12">
+                        <div class="col-sm-2">
+                            <label class='radio-inline'>
+                                <input type='radio' value='0' name='bsearchtime' {if $_GPC['bsearchtime']=='0'}checked{/if}>不搜索
+                            </label>
+                            <label class='radio-inline'>
+                                <input type='radio' value='1' name='bsearchtime' {if $_GPC['bsearchtime']=='1'}checked{/if}>搜索
+                            </label>
+                        </div>
+                        {php echo tpl_form_field_daterange('btime', array('starttime'=>date('Y-m-d H:i', $bstarttime),'endtime'=>date('Y-m-d  H:i', $bendtime)),true);}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">订单计数时间</label>
+                    <div class="col-sm-7 col-lg-9 col-xs-12">
+                        <div class="col-sm-2">
+                            <label class='radio-inline'>
+                                <input type='radio' value='0' name='osearchtime' {if $_GPC['osearchtime']=='0'}checked{/if}>不搜索
+                            </label>
+                            <label class='radio-inline'>
+                                <input type='radio' value='1' name='osearchtime' {if $_GPC['osearchtime']=='1'}checked{/if}>搜索
+                            </label>
+                        </div>
+                        {php echo tpl_form_field_daterange('otime', array('starttime'=>date('Y-m-d H:i', $ostarttime),'endtime'=>date('Y-m-d  H:i', $oendtime)),true);}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">下线成为分销商时间</label>
+                    <div class="col-sm-7 col-lg-9 col-xs-12">
+                        <div class="col-sm-2">
+                            <label class='radio-inline'>
+                                <input type='radio' value='0' name='searchtime' {if $_GPC['searchtime']=='0'}checked{/if}>不搜索
+                            </label>
+                            <label class='radio-inline'>
+                                <input type='radio' value='1' name='searchtime' {if $_GPC['searchtime']=='1'}checked{/if}>搜索
+                            </label>
+                        </div>
+                        {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d  H:i', $endtime)),true);}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">会员信息</label>
+                    <div class="col-sm-8 col-lg-9 col-xs-12">
+                        <input type="text" class="form-control"  name="realname" value="{$_GPC['realname']}" placeholder='可搜索昵称/名称/手机号'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">导师</label>
+                    <div class="col-sm-8 col-lg-9 col-xs-12">
+                        <select name='mentor_search' class='form-control'>
+                            <option value=''></option>
+                            <option value='weifenpei' {if $mentor_search=='weifenpei'}selected{/if}>未分配</option>
+                            {loop $others $others_name}
+
+                            <option value='{$others_name['id']}' {if $mentor_search==$others_name['id']}selected{/if} >{$others_name['name']}</option>
+
+                            {/loop}
+                        </select>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label"></label>
+                    <div class="col-sm-8 col-lg-9 col-xs-12">
+                        <button class="btn btn-default"><i class="fa fa-search"></i> 搜索</button>
+                        <input type="hidden" name="token" value="{$_W['token']}" />
+                        {ifp 'statistics.index.export'}
+                        <button type="submit" name="export" value="1" class="btn btn-primary">导出 Excel</button>
+
+                        {/if}
+                    </div>
+                </div>
+
+        </form>
+
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">总数：{$total}</div>
+    <div class="panel-body">
+        <table class="table table-hover table-responsive">
+            <thead class="navbar-inner" >
+            <tr>
+                <th style='width:80px;'>排名</th>
+                <th style='width:80px;'>会员ID</th>
+                <th style='width:120px;'>推荐人</th>
+                <th style='width:120px;'>粉丝</th>
+                <th style='width:120px;'>导师</th>
+                <th style='width:110px;'>姓名<br/>手机号码</th>
+                <th style='width:120px;'>一级分销商</th>
+                <th style='width:120px;'>二级分销商</th>
+                <th style='width:120px;'>销售额</th>
+                <th style='width:120px;'>订单数</th>
+                <th style='width:200px;'>时间</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {loop $list $index $row}
+            <tr data-id="{$row['id']}">
+                <td>{php echo $index+1 }</td>
+                <td>{$row['id']}</td>
+                <td  {if !empty($row['agentid'])}title='ID: {$row['agentid']}'{/if}>
+                {if empty($row['agentid'])}
+                {if $row['isagent']==1}
+                <label class='label label-primary'>总店</label>
+                {else}
+                <label class='label label-default'>暂无</label>
+                {/if}
+                {else}
+                <img src='{$row['parentavatar']}' style='width:30px;height:30px;padding1px;border:1px solid #ccc' /> {$row['parentname']}
+                {/if}
+                </td>
+                <td>
+                    {if !empty($row['avatar'])}
+                    <img src='{$row['avatar']}' style='width:30px;height:30px;padding1px;border:1px solid #ccc' />
+                    {/if}
+                    {if empty($row['nickname'])}未更新{else}{$row['nickname']}{/if}
+
+                </td>
+                <td>
+                    {if !empty($row['menhead']) || !empty($row['menname'])}
+                    <img src='{$row['menhead']}' style='width:30px;height:30px;padding1px;border:1px solid #ccc' />
+                    {$row['menname']}
+                    {else}
+                    <span class="label label-default">未分配</span>
+                    {/if}
+
+                </td>
+
+                <td>{$row['realname']} <br/> {$row['mobile']}</td>
+                <td>
+                    {$row['level1']} 人
+                </td>
+                <td>
+                    {$row['level2']} 人
+                </td>
+                <td>
+                    {$row['ordersales']}
+                </td>
+                <td>
+                    {$row['ordercount']}
+                </td>
+                <td>注册时间：{php echo date('Y-m-d H:i',$row['createtime'])}<br/>
+                    代理时间：{if !empty($row['agenttime'])}{php echo date('Y-m-d H:i',$row['agenttime'])}{/if}
+                </td>
+
+
+            </tr>
+            {/loop}
+            </tbody>
+        </table>
+        {$pager}
+    </div>
+</div>
+<script>
+
+    $(function(){
+        $('.mentor_botton').click(function(event){
+            event.stopPropagation();
+            var id = $(this).parents('tr').attr('data-id');
+            $('#mentor_id').val(id);
+            $('#ttt').show(500);
+            $('#mentor_ttt').show(500);
+        });
+        $(document).click(function(event){
+            var _con = $('#mentor_ttt');   // 设置目标区域
+            if(!_con.is(event.target) && _con.has(event.target).length === 0){ // Mark 1
+                $('#ttt').hide(1000);          //淡出消失
+                $('#mentor_ttt').hide(1000);          //淡出消失
+            }
+        });
+    })
+</script>
+{template 'web/_footer'}

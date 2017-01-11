@@ -1,0 +1,336 @@
+{template 'common/header'}
+<title>商品分类</title>
+<style type="text/css">
+    body {margin:0px;padding:0px; width:100%; height:100%; background:#fff; color:#fff; }
+ .topbar {/* position:fixed;top:0px; */width:100%; height:40px;  background:#f9f9f9; border-bottom:1px solid #e8e8e8; font-size:16px; line-height:40px; text-align:center; color:#666;}
+    .topbar a {height:40px; width:15px; display:block; float:left; margin-left:10px;outline:0px; color:#999; font-size:24px;}
+ 
+/*     .main {position:fixed;top:41px;  height:100%;} */
+   .search {height:40px;margin-left:30px; color:#ccc; line-height:40px; font-size:14px; text-align:center;}
+#left_container ul{ }
+#left_container ul .Mymain{ height: 4.5rem; width: 100%; margin-top: 0.2rem; position: relative;overflow: hidden;}
+/* #left_container ul .Mymain:first-child{margin-top:50px;} */
+#left_container ul .Mymain img{height: 100%;}
+#left_container ul .Mymain .more-info{display: none;width: 100%;background:#fff; overflow: hidden;/* padding-bottom: 0.35rem; */position: absolute;left: 0;top: 50%;transform: translatey(-50%);-webkit-transform: translatey(-50%);box-sizing: border-box;border-bottom: 1px solid #ccc;}
+#left_container ul .Mymain .more-info h3{ height: 1.5rem; background:#F4D500 ;position: relative; margin:0;}
+#left_container ul .Mymain .more-info h3 div{text-align: center;font-weight: bold;/* font-family: "Helvetica"; */}
+#left_container ul .Mymain .more-info h3 .first-title{font-size: 0.45rem;padding-top: 0.25rem;color: #222121;}
+#left_container ul .Mymain .more-info h3 .second-title{font-size: 0.3rem;font-family: "Helvetica";color: #fff;}
+#left_container ul .Mymain .more-info ul {padding:0 0.475rem;overflow:hidden;}
+#left_container ul .Mymain .more-info li{ float: left; width: 3.75rem; text-align: center;text-align: left;height:0.9rem;line-height:0.9rem;}
+/* #left_container ul .Mymain .more-info li:last-child{padding-bottom: 0.35rem;} */
+#left_container ul .Mymain .more-info li a{ display:block;font-size: 0.35rem; color: #373737;width:100%;height:100%;line-height:0.9rem;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;border-bottom:2px dotted #F4D500;}
+
+a{text-decoration:none;}
+#left_container ul .Mymain .more-info li a span{padding:0.0rem 0.1rem;background:#F4D500;border-radius:3px;font-size:10px;transform: scale(0.9);-webkit-transform: scale(0.7);}
+
+/*     #left_container { float:right;width:100%;height:100%;background:#efefef;overflow:auto;}
+    #left_container .parent_item {width:94%; padding:0 3%;line-height:35px;font-size:13px;float:left; text-align:center; color:#333;}
+    #left_container .on {background:#fff;} */
+/*     
+    #right_container { float:right;margin-right:-90px;width:100%; z-index:1;overflow:auto;}
+ 
+    #right_container .inner { margin-right: 90px; background:#fff;height:100%;padding:10px 10px  35px 10px;;}
+    #right_container .inner .category_item { width:27%;float:left;padding:5px;color:#333;font-size:13px; text-align: center;}
+    #right_container .inner .category_item .name {height:16px;overflow:hidden;width:100%; text-align: center;}
+    #right_container .inner img{width:100%;}
+    
+    #right_container .inner .category_no {width:100%;height:100px;color:#333; text-align: center;}
+    
+    #right_container .inner .category_title { color:#999;font-size:13px;padding:10px 0 10px 0;width:100%;float:left;}
+    
+   #right_container .adv { color:#999;font-size:13px;margin:5px;float:left;padding:0;} 
+   #right_container .adv img {width:100%;}
+   
+
+    
+    #category_loading { width:94%;padding:10px;color:#666;text-align: center;float:right;}
+  */
+ .will-change{will-change: transform;}
+</style>
+<script>
+    var oHtml=document.documentElement;
+    getSize();
+    function getSize(){
+    //获取屏幕宽度
+    var screenWidth=oHtml.clientWidth;
+    oHtml.style.fontSize=screenWidth/9.38+'px'
+    
+
+    }
+    //当窗口宽度被改变时调用这个函数
+    window.onresize=function(){
+        getSize();
+
+    }
+    getSize();
+
+</script>
+<!-- <script type="text/javascript" src="../addons/ewei_shop/static/js/dist/fastclick.js">
+var attachFastClick = require('fastclick');
+attachFastClick(document.body);
+</script>
+ -->
+<div id='container'></div>
+
+<script id='tpl_main' type='text/html'>
+   <div class="topbar"></a>
+    <div class='search' id="webviewSearch"><i class="fa fa-search"></i> 在店铺内搜索</div>
+   </div>
+     <!--搜索-->
+<!--     <div class="search1">
+                <div class="topbar1">
+                    <div class='right'>
+                        <button class="sub1"><i class="fa fa-search"></i></button>
+                        <div class="home1">取消</div>
+                    </div>
+                    <div class='left_wrap'>
+                        <div class='left'>
+                            <input type="text" id='keywords' class="input1" placeholder='搜索: 输入商品关键词' value='{$_GPC['keywords']}'/>
+                        </div>
+                    </div>
+                </div>
+                <div id='search_container' class='result1'>
+        </div>
+     </div> -->
+     
+     
+    <div class="main">
+
+
+        <!--页面的主体部分 -->
+        <div id="left_container"><ul>
+        <!-- test -->
+               
+            </ul>
+        </div>
+         
+     </div>
+
+
+</script>
+
+<script id='tpl_search_list' type='text/html'>
+
+    <ul>   
+        <%each list as value%>
+            <li><i class="fa fa-angle-right"></i> <a href="{php echo $this->createMobileUrl('shop/detailCopy')}&id=<%value.id%>&isApp=true&fakeOpenId={php echo $_GPC['fakeOpenId']}"><%value.title%></a></li>
+        <%/each%>
+    </ul>
+</script>
+
+
+<script id='tpl_parent_list' type='text/html'>
+    <%each category as value%>
+    <li class="Mymain will-change" >
+     <img src="<%value.advimg%>" width="100%"/> 
+   <!--  <div class="parent_item" data-cate="<%value.id%>" data-advimg='<%value.advimg%>' data-advurl='<%value.advurl%>'> -->
+    <div class="more-info will-change">
+        <h3>
+        	<div class="first-title"><%value.name%></div>
+
+
+        </h3>
+        <ul class="will-change">
+            <%each value.children as value1%>
+        	<li  class="will-change">
+
+        			<!-- <div class="category_item" data-pcate="<%value1.parentid%>" data-ccate="<%value1.id%>" data-level='<%value1.level%>'> -->
+                            <a 
+                            href="javascript:;"  
+                            data-pcate="<%value1.parentid%>"  
+                            data-ccate="<%value1.id%>" 
+                            data-level='<%value1.level%>'>
+                            <%value1.name%>
+                            </a>
+        		<!-- 	</div> -->
+        	</li>
+            <%/each%>
+        </ul>
+    </div>
+    </li>
+    <%/each%>
+    <!-- 分类页动画 -->
+    <script>
+
+        var flheight=$('#left_container .Mymain').height();
+        $('#left_container .Mymain').click(function(event) {
+
+        var trueheight;
+        var thetop=$(this).offset().top;
+    
+        $(this).siblings('.Mymain').height(flheight).removeClass('opend');
+        $(this).siblings('.Mymain').find('.more-info').slideUp(250)
+
+
+        var the=$(this).find('.more-info')
+        var theheight=the.height();
+        if (theheight<=flheight) {
+            trueheight=flheight;
+            $(this).find('.more-info').css('height', trueheight);
+        }else{
+            trueheight=theheight;
+        }
+        $(this).toggleClass('opend');
+
+        if ($(this).hasClass('opend')) {
+        the.slideToggle(250);
+
+        $(this).animate({'height': trueheight}, 250);
+
+    }else{
+        the.slideToggle(250)
+        $(this).animate({'height': flheight}, 250);
+
+    }
+
+    });
+
+    </script>
+
+
+
+
+</script>
+
+ 
+<script language='javascript'>
+    var category = [];
+    var children = [];
+    var recommand = [];
+    var pcate = 'rec';
+    //判断手机类型
+    var browser = {
+                    versions: function() {
+                    var u = navigator.userAgent, app = navigator.appVersion;
+                    return {//移动终端浏览器版本信息 
+                        trident: u.indexOf('Trident') > -1, //IE内核
+                        presto: u.indexOf('Presto') > -1, //opera内核
+                        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                        wechat:u.indexOf('MicroMessenger') > -1,//微信
+                        mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                        iPad: u.indexOf('iPad') > -1, //是否iPad
+                        webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                    };
+                    }(),
+                        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+                    }
+
+    require(['tpl', 'core'], function (tpl, core) {
+     
+        function bindChildEvents(){
+            
+            $('#left_container ul .Mymain .more-info li a').click(function(event) {
+                var mainId =$(this).attr('data-pcate');
+                var subId =$(this).attr('data-ccate');
+
+                if ( !subId == "" &&  !mainId == "" ) {
+                    categoryclick.onClickCategoryListener(mainId,subId);
+                };
+               
+            
+            });
+        }
+
+        function bindChildEventsIos(){
+            
+            $('#left_container ul .Mymain .more-info li a').click(function(event) {
+                var mainId =$(this).attr('data-pcate');
+                var subId =$(this).attr('data-ccate');
+
+                if ( !subId == "" &&  !mainId == "" ) {
+                    onClickCategoryListener(mainId,subId);
+                };
+               
+            
+            });
+        }
+
+        core.json('shop/utilCopy',{op:'category',isApp:'true',fakeOpenId:'{$_GPC['fakeOpenId']}'}, function (json) {
+                 result = json.result;
+                 category = result.category;
+                 $('#container').append(tpl('tpl_main'));
+           
+           $('.main').height($(document.body).height()-90);
+            // xiu
+                 $('#left_container ul').html(tpl('tpl_parent_list',result));
+
+                var manycl=$('.Mymain').length;
+                for (var i = 0; i < manycl; i++) {
+                    var howmuchpro;
+                    howmuchpro=$('#left_container ul .Mymain').eq(i).find('.more-info li').length;
+                    $('#left_container ul .Mymain').eq(i).find('.more-info li').each(function(index, el) {
+                        var productName=$(this).find('a').html();
+                        var newarry= productName.split('-');
+                        if (newarry[1] == undefined) {
+                            newarry[1] = newarry[0];
+                            newarry[0] = '';
+                        };
+                        productName=$(this).find('a').html('<span>'+newarry[0]+'</span>&nbsp;'+newarry[1])
+                        if ($(this).find('a span').html() == '') {
+                          
+                            $(this).find('a').html(newarry[1])
+                        };
+
+
+                        if (index%2 == 0) {
+                        $(this).css('float', 'left');
+                        }else{
+                        $(this).css('float', 'right');
+                        }
+
+                        if (index+1 == howmuchpro) {
+                            $(this).find('a').css('border', 'none');
+                        };
+                        if (index+1 == howmuchpro && index%2 !=0 ) {
+                            $('#left_container ul .Mymain').eq(i).find('.more-info li').eq(index-1).css('border', 'none');
+                        };
+                    });
+                };
+
+                if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                        var aTag = document.getElementById('keepImg');
+                        var webviewSearch = document.getElementById('webviewSearch');
+                        bindChildEventsIos();
+
+                        webviewSearch.addEventListener('click', function(){
+                            onClickSearchListener(); 
+                            return false;
+                        }, false); 
+                }
+                else if (browser.versions.android) {
+                    var aTag = document.getElementById('keepImg');
+                    var webviewSearch = document.getElementById('webviewSearch');
+                        bindChildEvents();
+
+                    webviewSearch.addEventListener('click', function(){  
+                        //调用android本地方法  
+                        categoryclick.onClickSearchListener(); 
+                        return false;  
+                    }, false); 
+
+
+                }
+
+  
+                   
+        
+        }, true);
+ 
+        $('.sort').click(function () {
+                var display = $(".sort_list").css('display');
+                if (display == 'none') {
+                    $(".sort_list").fadeIn(200);
+                } else {
+                    $(".sort_list").fadeOut(100);
+                }
+
+        });
+     
+    });
+
+</script>

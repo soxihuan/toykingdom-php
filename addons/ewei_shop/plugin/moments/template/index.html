@@ -1,0 +1,247 @@
+{template 'web/_header'}
+{template 'tabs'}
+{if $operation == 'display'}
+
+
+<div class="main">
+<div class="panel panel-info">
+    <div class="panel-heading">筛选</div>
+    <div class="panel-body">
+        <form action="./index.php" method="get" class="form-horizontal" role="form">
+            <input type="hidden" name="c" value="site" />
+            <input type="hidden" name="a" value="entry" />
+            <input type="hidden" name="m" value="ewei_shop" />
+            <input type="hidden" name="do" value="plugin" />
+            <input type="hidden" name="p"  value="moments" />
+            <input type="hidden" name="op" value="display" />
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">关键字</label>
+                <div class="col-xs-12 col-sm-8 col-lg-9">
+                    <input class="form-control" name="keyword" id="" type="text" value="{$_GPC['keyword']}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">状态</label>
+                <div class="col-xs-12 col-sm-8 col-lg-9">
+                    <select name="status" class='form-control'>
+                        <option value="" {if $_GPC['status'] == ''} selected{/if}></option>
+                        <option value="1" {if $_GPC['status']== '1'} selected{/if}>上架</option>
+                        <option value="0" {if $_GPC['status'] == '0'} selected{/if}>下架</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-3 col-md-1 control-label">分类</label>
+                <div class="col-sm-8 col-xs-12">
+                    {if intval($shopset['catlevel'])==3}
+                    {php echo tpl_form_field_category_3level('category', $parent, $children, $params[':pcate'], $params[':ccate'], $params[':tcate'])}
+                    {else}
+                    {php echo tpl_form_field_category_2level('category', $parent, $children, $params[':pcate'], $params[':ccate'])}
+                    {/if}
+                </div>
+                <div class="col-xs-12 col-sm-2 col-lg-2">
+                    <button class="btn btn-default"><i class="fa fa-search"></i> 搜索</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+            </div>
+        </form>
+    </div>
+</div>
+<style>
+    .label{cursor:pointer;}
+</style>
+
+<form action="" method="post">
+    <div class="panel panel-default">
+        <div class="panel-body table-responsive">
+            <table class="table table-hover">
+                <thead class="navbar-inner">
+                <tr>
+                    <th style="width:60px;">ID</th>
+                    <th style="width:60px;">商品</th>
+                    <th  style="width:300px;">&nbsp;</th>
+                    <th style="">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {loop $list $item}
+                <tr>
+
+                    <td>{$item['id']}</td>
+                    <td title="{$item['title']}">
+                        <img src="{php echo tomedia($item['thumb'])}" style="width:40px;height:40px;padding:1px;border:1px solid #ccc;"  />
+                    </td>
+                    <td title="{$item['title']}" class='tdedit'>
+                        {if !empty($category[$item['pcate']])}
+                        <span class="text-danger">[{$category[$item['pcate']]['name']}]</span>
+                        {/if}
+                        {if !empty($category[$item['ccate']])}
+                        <span class="text-info">[{$category[$item['ccate']]['name']}]</span>
+                        {/if}
+                        {if !empty($category[$item['tcate']]) && intval($shopset['catlevel'])==3}
+                        <span class="text-info">[{$category[$item['tcate']]['name']}]</span>
+                        {/if}
+                        <br/>
+                        {ifp 'shop.goods.edit'}
+
+                        <span class=' fa-edit-item' style='cursor:pointer'><i class='fa fa-pencil' style="display:none"></i> <span class="title">{$item['title']}</span> </span>
+                        <div class="input-group goodstitle" style="display:none" data-goodsid="{$item['id']}">
+                            <input type='text' class='form-control' value="{$item['title']}"   />
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default" data-goodsid='{$item['id']}' data-type="title"><i class="fa fa-check"></i></button>
+                            </div>
+                        </div>
+                        {else}
+                        {$item['title']}
+                        {/if}
+                    </td>
+
+                    <td style="position:relative;">
+                        {ifp 'moments.edit|moments.view'}<a href="{php echo $this->createPluginWebUrl('moments', array('id' => $item['id'], 'op' => 'post'))}"class="btn btn-sm btn-default" title="{ifp 'shop.goods.edit'}编辑{else}查看{/if}"><i class="fa fa-pencil"></i></a>{/if}
+                    </td>
+                </tr>
+                {/loop}
+                <tr>
+
+                </tr>
+
+                </tr>
+                </tbody>
+            </table>
+            {$pager}
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript">
+    function fastChange(id, type, value) {
+
+        $.ajax({
+            url: "{php echo $this->createWebUrl('shop/goods')}",
+            type: "post",
+            data: {op: 'change', id: id, type: type, value: value},
+            cache: false,
+            success: function () {
+
+            }
+        })
+    }
+
+
+</script>
+{elseif $operation == 'post'}
+<form {ifp 'moments.edit|moments.check'}action="" method='post'{/if} class='form-horizontal'>
+<input type="hidden" name="id" value="{$item['id']}">
+
+
+<div class='panel panel-default'>
+
+
+    <div class='panel-heading'>
+        多文案添加
+    </div>
+    <div class='panel-body'>
+
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">文案</label>
+            <div class="col-sm-6 col-xs-6">
+                {ife 'shop.goods' $item}
+                <textarea name="moments_copy" id="moments_copy" class="form-control" >{$item['moments_copy']}</textarea>
+                <span class="help-block">如果不填写，默认为商品名称，最多500字 </span>
+                {else}
+                <div class='form-control-static'>{$item['moments_copy']}</div>
+                {/if}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">文案图片</label>
+            <div class="col-sm-9 col-xs-12">
+                {ife 'shop.goods' $item}
+                {php echo tpl_form_field_multi_image('moments_imgs',$wa_piclist)}
+                <span class="help-block">建议尺寸: 640 * 640 ，或正方型图片 ，最多上传九张 </span>
+                {else}
+                {loop $wa_piclist $p}
+                <a href='{php echo tomedia($p)}' target='_blank'>
+                    <img src="{php echo tomedia($p)}" style='height:100px;border:1px solid #ccc;padding:1px;float:left;margin-right:5px;' />
+                </a>
+                {/loop}
+                {/if}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">文案</label>
+            <div class="col-sm-6 col-xs-6">
+                {ife 'shop.goods' $item}
+
+                <textarea name="moments_copy2" id="moments_copy2" class="form-control" >{$item['moments_copy2']}</textarea>
+                {else}
+                <div class='form-control-static'>{$item['moments_copy2']}</div>
+                {/if}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">文案图片</label>
+            <div class="col-sm-9 col-xs-12">
+                {ife 'shop.goods' $item}
+                {php echo tpl_form_field_multi_image('moments_imgs2',$wa_piclist2)}
+                <span class="help-block">建议尺寸: 640 * 640 ，或正方型图片 ，最多上传九张</span>
+                {else}
+                {loop $wa_piclist2 $p}
+                <a href='{php echo tomedia($p)}' target='_blank'>
+                    <img src="{php echo tomedia($p)}" style='height:100px;border:1px solid #ccc;padding:1px;float:left;margin-right:5px;' />
+                </a>
+                {/loop}
+                {/if}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">文案</label>
+            <div class="col-sm-6 col-xs-6">
+                {ife 'shop.goods' $item}
+
+                <textarea name="moments_copy3" id="moments_copy3" class="form-control" >{$item['moments_copy3']}</textarea>
+                {else}
+                <div class='form-control-static'>{$item['moments_copy3']}</div>
+                {/if}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">文案图片</label>
+            <div class="col-sm-9 col-xs-12">
+                {ife 'shop.goods' $item}
+                {php echo tpl_form_field_multi_image('moments_imgs3',$wa_piclist3)}
+                <span class="help-block">建议尺寸: 640 * 640 ，或正方型图片 ，最多上传九张</span>
+                {else}
+                {loop $wa_piclist3 $p}
+                <a href='{php echo tomedia($p)}' target='_blank'>
+                    <img src="{php echo tomedia($p)}" style='height:100px;border:1px solid #ccc;padding:1px;float:left;margin-right:5px;' />
+                </a>
+                {/loop}
+                {/if}
+            </div>
+        </div>
+
+        <div class='panel-body'>
+
+            <div class="form-group"></div>
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
+                <div class="col-sm-9 col-xs-12">
+                    {ifp 'moments.edit|moments.check'}
+                    <input type="submit" name="submit" value="提交" class="btn btn-primary col-lg-1"  />
+                    <input type="hidden" name="token" value="{$_W['token']}" />
+                    {/if}
+                    <input type="button" name="back" onclick='history.back()' {ifp 'moments.edit|moments.check'}style='margin-left:10px;'{/if} value="返回列表" class="btn btn-default" />
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</form>
+{/if}
+{template 'web/_footer'}

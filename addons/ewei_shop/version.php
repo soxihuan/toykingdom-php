@@ -1,0 +1,1 @@
+<?php if(!defined('IN_IA')) {exit('Access Denied');}if(!defined('ewei_shop_VERSION')) {define('ewei_shop_VERSION', '1.12.4');}
