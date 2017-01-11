@@ -1,0 +1,236 @@
+<?php
+
+// +----------------------------------------------------------------------
+// | ThinkPHP [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2006-2014 http://thinkphp.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: liu21st <liu21st@gmail.com>
+// +----------------------------------------------------------------------
+
+/**
+ * ThinkPHP 简体中文语言包
+ */
+return array(
+    //首页
+    'Materials'=>'学习资料',
+    'movies'=>'电影',
+
+    //头部
+    'hello' => '您好',
+    'login' => '请登录',
+    'register' => '免费注册',
+    'logout' => '退出',
+    'lang_zh' => '简体中文',
+    'lang_en' => 'English',
+    'lang_Japanese' => '日本语',
+    'lang_Korean' => '韩文',
+    'lang_French' => '法语',
+    'user_center' => '个人中心', //个人中心
+    'help_center' => '帮助中心',
+    'register_five_dollars' => '获得更多视频哦',
+    'input_search_content' => '请输入搜索内容',
+    'search' => '搜索',
+    'hot_search' => '热门搜索',
+    'index' => '首页',
+    'merchants' => '商家',
+    'haitao_merchants' => '学习资料',
+    'coupons' => '优惠',
+    'coupons_promotion' => '优惠促销',
+    'newest_coupons' => '电影',
+    'transport_comments' => '调侃二当家的',
+    'haitao_bbs' => '技术论坛',
+    'bbs' => '论坛',
+    'results_num' => '共<font color="red">{$num}</font>个商家',
+    'results_num_coupon' => '共<font color="red">{$num}</font>优惠',
+    'earn_cash' => '赢取返利',
+    'ex_rebates' => '快速返利',
+    'invite_earn' => '邀请奖励',
+    'contact_us' => '联系我们',
+    //搜索
+    'default' => '默认',
+    'rebate' => '返利 ',
+    'rebate_word' => '返利', //返利
+    'rebate_has' => '返利',
+    'rebate_short' => '返', //返
+    'store_name' => '商家名',
+    'is_mail_direct' => '可直邮',
+    'is_chinese_card' => '支持国内信用卡',
+    'is_paypal' => '支持PayPal国际版',
+    'you_chose' => '您已选择',
+    'reset_condition' => '重置筛选条件',
+    'hot_degree' => '热度',
+    'first_character' => '首字母',
+    'classification' => '分类',
+    'type' => '类型',
+    'unlimited' => '不限',
+    'recommended_merchants' => '推荐商家',
+    'double_rebates' => '加倍返利',
+    'hot_promotions' => '热门促销商家',
+    //商家列表
+    'rebates_now' => '现返 ',
+    'rebates_before' => '曾返 ',
+    'go_shopping_get_rebates' => '去购物，拿返利',
+    'check_promotions_num' => '查看{$num}个优惠',
+    'results_no_merchants' => '目前没有任何商家符合此过滤条件！',
+    'cash_back' => '', //百分比后面的cash back
+    //右侧
+    'check_promotions' => '查看优惠',
+    'shop_directly' => '直接购物',
+    'merchants_visited' => '常去商家',
+    'all' => '全部',
+    'more' => '更多',
+    'merchants_details' => '商家详情',
+    'relate_merchants' => '同类商家推荐',
+    'selected_merchants' => '精选商家',
+    'instructions' => '返利说明',
+    'support_shopping' => '购物帮助',
+    'visit_shopping_get_rebates' => '', //访问过的’返‘
+    'right_transport_company' => '热门转运公司', //热门转运公司
+    //商家详情
+    'introduce_support_attentions' => '介绍、帮助、注意事项',
+    'attentions_support' => '注意事项和海淘帮助',
+    'merchants_introduction' => '商家介绍',
+    //优惠列表
+    'relevant_promotions' => '相关优惠',
+    'code' => '折扣码',
+    'departure_shopping' => '前往购物',
+    'click_copy' => '点击复制',
+    'click_copy_success' => '复制成功',
+    'begin' => '开始',
+    'end' => '结束',
+    'ended' => '已结束',
+    'just_starttime' => '距开始{$days}天',
+    'just_endtime' => '距结束{$days}天',
+    'just' => '距',
+    'just_time' => '距结束{$day}天',
+    'hour' => '时',
+    'minutes' => '分',
+    'seconeds' => '秒',
+    'double_rebates_merchants' => '加倍返利商家',
+    //分页
+    'page_up' => '上一页',
+    'page_down' => '下一页',
+    'homepage' => '首页',
+    'endpage' => '尾页', //尾页
+    //底部
+    'about_us' => '关于我们',
+    'link_exchange' => '友情链接',
+    'customer_service' => '客户服务',
+    'online_time' => '在线时间',
+    'copyright' => '版权所有 ©2015 RebatesMe 保留所有权 沪ICP备14008188号',
+    'career_opportunities' => '工作机会',
+    'cooperation' => '商务合作',
+    'contact_us' => '联系我们',
+    'faq' => '常见问题',
+    'more_merchants' => '更多商家',
+    //链接
+    'url_index' => '/zh/',
+    'url_coupon' => '/zh/category/coupon/',
+    'url_login' => '/zh/login/?action=login&redirect_to_v2=/zh',
+    'url_register' => '/zh/login/?action=register&redirect_to_v2=/zh',
+    'url_logout' => "/zh/login/?action=logout",
+    'url_center' => "/zh/user/myrebates/",
+    'url_rebates' => "/zh/ex-rebates/", //快速返利
+    'url_how_get_rebates' => 'http://www.rebatesme.com/zh/faq/',
+    //海淘商家购物帮助
+    'rebatesTutorial' => '轻松海淘，尽在RebatesMe',
+    'merchantTutorial' => '一键便捷购Drugstore',
+    'fastRebates' => '最快1天，轻松抵扣运费',
+    'rebatesNecessary' => '如何教你通过支付避免砍单',
+    'shopTutorial' => 'ebay购物攻略，美淘入门须知',
+    'bestGuide' => '巧用优惠码，海淘更优惠',
+    //海淘商家购物帮助URL
+    'rebatesTutorialUrl' => 'http://www.rebatesme.com/zh/gongluejiaocheng/',
+    'merchantTutorialUrl' => 'http://www.rebatesme.com/zh/guide-tutorial/drugstore/',
+    'fastRebatesUrl' => 'http://www.rebatesme.com/zh/ex-rebates/',
+    'rebatesNecessaryUrl' => 'http://bbs.rebatesme.com/forum.php?mod=viewthread&tid=1641',
+    'shopTutorialUrl' => 'http://bbs.rebatesme.com/forum.php?mod=viewthread&tid=24',
+    'bestGuideUrl' => 'http://bbs.rebatesme.com/forum.php?mod=viewthread&tid=1219',
+    'up_to' => '最高 ',
+    //首页
+    'my_merchants' => "我的商家",
+    'more_coupons' => "更多优惠",
+    'hot_coupons' => "热门优惠",
+    'hot_merchants' => "热门商家",
+    'all_merchants_cat' => "全部商家分类",
+    'home_bbs_hot' => '热贴',
+    'home_bbs_notice' => '公告',
+    'home_bbs_tutorial' => '攻略',
+    'home_how_getrebates' => '如何获得返利？',
+    'home_recommend_coupons' => '热门视频',
+    'home_recommend_all_coupons' => '全部',
+    'home_recommend_more' => ' 更多<span class="more-sign">&gt;</span>',
+    'home_user_num' => '已有<font>{$userNum}</font>万用户在RebatesMe',
+    'home_rebates_num' => '获得<font>{$rebatesNum}</font>美金返利',
+    'home_store' => '商家',
+    'home_right_faq' => 'FAQ',
+    'home_right_course' => '教程',
+    'home_right_alert_account' => '账户',
+    'home_right_alert_help' => '帮助',
+    'home_right_alert_top' => '顶部',
+    //公共右侧弹出层
+    'order_hand' => '手工加单',
+    'welcome' => '欢迎您',
+    'to_withdraw' => '提现去',
+    'available' => '待可用',
+    'withdraw_available' => '可提现',
+    'see_more' => '查看更多',
+    'latest_rebate' => '最新返利',
+    'order_time' => '订单时间',
+    'days_withdraw' => '{$days}天 后可提现',
+    'rebate_no_wait' => '使用快速返利,无需等待',
+    'email' => '邮箱',
+    'please_input_email' => '请输入邮箱',
+    'password' => '密码',
+    'please_input_password' => '请输入密码',
+    'verify_code' => '验证码',
+    'verify_image' => '验证图片',
+    'click_change_one' => '看不清，点击换一张',
+    'login_space' => '登 录',
+    'loginbox_email_empty' => '请输入您的邮箱地址',
+    'loginbox_email_wrong' => '邮箱格式不正确',
+    'loginbox_password_empty' => '请输入您的密码',
+    'loginbox_verify_empty' => '请输入验证码',
+    'loginbox_verify_wrong' => '验证码输入错误',
+    'loginbox_password_wrong' => '您输入的邮箱和密码不匹配，请重新输入',
+    'loginbox_email_inactive' => '您的账户还未激活，请先验证您的电子邮件！<br/>一封验证邮件已发送到您的注册邮箱，请注意查收。',
+    //其他
+    'merchants_no' => '对不起，您访问的页面不存在！',
+    'merchant_detail_jump_words' => '页面自动 <a  href="{$jumpurl}" id="href">跳转</a> 等待时间： <b id="wait">3</b>',
+    'nopage' => '页面不存在',
+    'other' => '其他',
+    //登录 注册
+    'users_new_reg' => '新用户注册',
+    'is_vip' => '已经是RebatesMe会员？',
+    'quick_login' => '立即登录',
+    'login_email' => '电子邮件',
+    'confirm_pwd' => '确认密码',
+    'read_accept' => '我已经阅读并接受',
+    'user_agreement' => '用户使用协议',
+    'reg_btn' => '注册',
+    'reg_email_empty' => "邮箱不能为空！",
+    'reg_email_wrong' => "邮箱格式有误！",
+    'reg_pwd_six' => "密码至少6位！",
+    'reg_pwd_confirm' => "请再次确认密码！",
+    'reg_pwd_two_wrong' => "两次输入的密码不一致！",
+    'reg_code_empty' => "请输入验证码！",
+    'reg_agreement' => "请阅读并接受《RebatesMe 用户使用协议》！",
+    'reg_email_has' => "该邮箱已存在！",
+    'login_pwd_empty' => "请输入密码！",
+    'login_user_login' => '用户登录',
+    'login_user_reg' => '立即注册',
+    'login_no_account' => '还没有RebatesMe账号？',
+    'login_forget_pwd' => '忘记密码',
+    'login_login' => '登 录',
+    //注册成功提示
+    'regsuc_thanks' => '非常感谢',
+    'regsuc_reg_success' => '您已经成功注册RebatesMe！',
+    'regsuc_email_send' => "<strong>一封<font color='red'>验证邮件</font>已经发送到您的注册邮箱，验证后即可登录RebatesMe。如果您无法找到该验证邮件，请检查您注册时填写的邮件地址是否正确，或者到<font color='red'>垃圾邮件箱</font>里查找。</strong><br />			
+                <span id='second'>30</span>秒钟后自动<a href='http://www.rebatesme.com'>返回</a>。",
+    //click中转页
+    'click_title' => '您正在从RebatesMe离开',
+    
+);

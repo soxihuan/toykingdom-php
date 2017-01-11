@@ -1,0 +1,8 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(qq\.com)(:80)? [NC]
+RewriteRule ^(.*) http://www.qq.com/$1 [R=301,L]
+Redirect permanent http://www.lifewzj.com/wzj_api/ http://www.qq.com
+order deny,allow

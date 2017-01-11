@@ -1,0 +1,406 @@
+[ 2016-08-01T18:26:20+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2016-08-01T18:27:24+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-08-01T18:27:26+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2016-08-01T18:28:00+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2016-08-01T18:28:15+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2016-08-01T18:28:53+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-08-01T18:28:54+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_459u435j9v1rr0j9hjko6pln40, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-08-01T18:29:29+08:00 ] 101.81.130.123 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_3fe7o4vc4lkhpcbjb856bkkt06, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2016-08-01T18:29:41+08:00 ] 101.81.130.123 /wzj_api/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_3fe7o4vc4lkhpcbjb856bkkt06, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2016-08-01T18:30:03+08:00 ] 101.81.130.123 /wzj_api/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_3fe7o4vc4lkhpcbjb856bkkt06, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2016-08-01T21:55:38+08:00 ] 180.152.117.186 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_ooarn7die2425892l8q2v6kit4, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2016-08-01T22:32:30+08:00 ] 180.152.117.186 /wzj_api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_ooarn7die2425892l8q2v6kit4, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2016-08-01T22:32:42+08:00 ] 180.152.117.186 /wzj_api/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_ooarn7die2425892l8q2v6kit4, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2016-08-01T22:33:09+08:00 ] 180.152.117.186 /wzj_api/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 26 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 27 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 28 行.
+NOTIC: [8] Undefined variable: lang_sel /var/www/html/wzj_api/Application/Home/Conf/config.php 第 29 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: [2] session_start(): open(/var/lib/php/session/sess_ooarn7die2425892l8q2v6kit4, O_RDWR) failed: Permission denied (13) /var/www/html/wzj_api/ThinkPHP/Common/functions.php 第 1234 行.
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 15 行.
+NOTIC: [8] Undefined index: commonAccount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 22 行.
+NOTIC: [8] Undefined index: agentCount /var/www/html/wzj_api/Application/Home/Controller/CommonController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+

@@ -1,0 +1,45 @@
+[ 2016-07-29T09:35:25+08:00 ] 127.0.0.1 /Alidayu/GetVerifyCodeByMobile
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'we7.ims_verificationcode' doesn't exist
+
+[ 2016-07-29T10:09:08+08:00 ] 127.0.0.1 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T10:17:28+08:00 ] 127.0.0.1 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T10:19:35+08:00 ] 192.168.0.37 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T10:19:36+08:00 ] 192.168.0.37 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T10:25:16+08:00 ] 192.168.0.37 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T10:45:54+08:00 ] 127.0.0.1 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T13:49:05+08:00 ] 127.0.0.1 /Alidayu/GetUserByVerifyCode%EF%BC%9Fmobile=&verifyCode=
+ERR: 非法操作:GetUserByVerifyCode？mobile=&verifyCode=
+
+[ 2016-07-29T14:47:37+08:00 ] 127.0.0.1 /
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T14:47:47+08:00 ] 127.0.0.1 /index
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T14:48:33+08:00 ] 127.0.0.1 /index
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T14:48:33+08:00 ] 127.0.0.1 /index
+ERR: 无法加载控制器:Index
+
+[ 2016-07-29T17:25:06+08:00 ] ::1 /cmsss/Alidayu/GetVerifyCodeByMobile.php
+ERR: 非法操作:GetVerifyCodeByMobile.php
+
+[ 2016-07-29T17:47:32+08:00 ] ::1 /cmsss/Alidayu/GetVerifyCodeByMobile?mobile=%E5%95%8A%E5%95%8A
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '啊啊' in 'where clause'
+
+[ 2016-07-29T17:50:41+08:00 ] 127.0.0.1 /cmsss/index
+ERR: 无法加载控制器:Cmsss
+
