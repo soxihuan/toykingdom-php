@@ -750,9 +750,9 @@ class BizController extends Controller {
 
     public function FoundList(){
         header('content-type:application/json;charset=utf8');
-        $token = "123";
-        //$token = I('post.token');
-        //$pageIndex = I('post.pageIndex');
+        
+        $token = I('post.token');
+        $pageIndex = I('post.pageIndex');
         if(!empty($token)){
             $user = M('ewei_shop_member');
             $where['token'] = $token;
@@ -774,7 +774,7 @@ class BizController extends Controller {
                     foreach($foundList as $key=>$val ){
                         $data['data'][$key]['foundId']=(int)$val['id'];
                         $data['data'][$key]['title']=$val['title'];
-                        $data['data'][$key]['headUrl']="http://www.njsanheshu.com/wjwg_api/Public/Home/images/wzj.jpg";
+                        $data['data'][$key]['headUrl']="http://www.njsanheshu.com/wjwg_api/Public/Home/images/wj.png";
                         $data['data'][$key]['createTime']=date("Y/m/d H:i:s",$val['createtime']);
                         if($val['type'] == 1 || empty($val['type'])){
                             $data['data'][$key]['shareUrl'] = URL_QCORD.'index.php?i=2&c=entry&m=ewei_shop&do=shop&p=detail&id='.$val['goods_id'].'&mid='.$mid;
